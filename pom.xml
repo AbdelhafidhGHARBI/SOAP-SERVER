@@ -12,6 +12,41 @@
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+
     </properties>
-    
+    <dependencies>
+        <!-- Jakarta EE pour JAX-WS (SOAP) Cette dépendance apporte l'API JAX-WS de Jakarta EE
+         afin de créer, publier et consommer des services SOAP -->
+        <dependency>
+            <groupId>jakarta.xml.ws</groupId>
+            <artifactId>jakarta.xml.ws-api</artifactId>
+            <version>4.0.0</version>
+        </dependency>
+
+        <dependency>
+            <!--> rt (runtime) fournit les classes nécessaires à l'exécution d'un service SOAP<-->
+            <groupId>com.sun.xml.ws</groupId>
+            <artifactId>rt</artifactId>
+            <version>4.0.0</version>
+        </dependency>
+
+        <dependency>
+            <groupId>jakarta.annotation</groupId>
+            <artifactId>jakarta.annotation-api</artifactId>
+            <version>2.1.1</version>
+        </dependency>
+        <!--> Cette dépendance fournit les annotations Jakarta, telles que @WebService, @WebMethod<-->
+        <dependency>
+            <groupId>jakarta.xml.bind</groupId>
+            <artifactId>jakarta.xml.bind-api</artifactId>
+            <version>4.0.0</version>
+        </dependency>
+        <!--> JAXB permet de transformer des objets Java en XML (marshalling) et inversement (unmarshalling).<-->
+        <dependency>
+            <groupId>org.glassfish.jaxb</groupId>
+            <artifactId>jaxb-runtime</artifactId>
+            <version>4.0.0</version>
+        </dependency>
+    </dependencies>
+
 </project>
